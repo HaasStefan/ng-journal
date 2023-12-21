@@ -1,0 +1,17 @@
+<a class="flex flex-row justify-center w-auto gap-4 " [href]="'https://github.com/' + author.github">
+
+  <img
+    [src]="author.image"
+    [alt]="author.imageAlt"
+    class="max-h-[5rem] max-w-[5rem] rounded-full shadow-md"
+    loading="lazy"
+  />
+  <div class="flex flex-col justify-center">
+    <div class="text-xl w-full flex flex-col gap-1">
+        <div>written by</div
+        ><div class="font-bold text-2xl">
+          {{ author.name }}
+        </div>
+    </div>
+  </div>
+</a>

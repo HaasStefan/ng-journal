@@ -1,49 +1,44 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {HeaderComponent} from "../components/header/header.component";
+import {FooterComponent} from "../components/footer/footer.component";
+import {RouterOutlet} from "@angular/router";
 
 @Component({
   selector: 'app-home',
   standalone: true,
   template: `
-    <div>
-      <a href="https://analogjs.org/" target="_blank">
-        <img alt="Analog Logo" class="logo analog" src="/analog.svg" />
-      </a>
-    </div>
+      <main class="h-screen w-full flex flex-col gap-4 justify-center items-center">
+          <h2 class="text-9xl font-bold bg-gradient-to-tr from-rose-500 to-fuchsia-500 bg-clip-text text-transparent">
+              NG Journal</h2>
+          <h3 class="text-5xl font-normal">A Community Blog for Angular</h3>
 
-    <h2>Analog</h2>
+          <div class="mt-8 flex gap-6">
+              <a href="/blog">
+                  <div class="p-1 text-xl font-medium rounded-md bg-gradient-to-tr from-rose-500 to-fuchsia-500">
 
-    <h3>The fullstack meta-framework for Angular!</h3>
+                      <div class="bg-white rounded-sm p-2 px-8">
+                          <span class=" bg-gradient-to-tr from-rose-500 to-fuchsia-500 bg-clip-text text-transparent">Blog</span>
 
-    <div class="card">
-      <button type="button" (click)="increment()">Count {{ count }}</button>
-    </div>
+                      </div>
+                  </div>
+              </a>
 
-    <p class="read-the-docs">
-      For guides on how to customize this project, visit the
-      <a href="https://analogjs.org" target="_blank">Analog documentation</a>
-    </p>
+              <a href="https://github.com/HaasStefan">
+                  <div class="p-1 text-xl font-medium rounded-md bg-neutral-700">
+
+                      <div class="bg-white rounded-sm p-2 px-8 text-neutral-700 flex gap-2 items-center">
+                          <img src="/github.svg" class="h-6 w-6" alt="github logo">
+                          <span>Contribute</span>
+                      </div>
+                  </div>
+              </a>
+          </div>
+      </main>
+
   `,
-  styles: [
-    `
-      .logo {
-        will-change: filter;
-      }
-      .logo:hover {
-        filter: drop-shadow(0 0 2em #646cffaa);
-      }
-      .logo.angular:hover {
-        filter: drop-shadow(0 0 2em #42b883aa);
-      }
-      .read-the-docs {
-        color: #888;
-      }
-    `,
-  ],
+  imports: [
+    RouterOutlet
+  ]
 })
 export default class HomeComponent {
-  count = 0;
-
-  increment() {
-    this.count++;
-  }
 }
