@@ -1,12 +1,12 @@
 ---
 title: Module Boundaries with Nx
-image: https://i.imgur.com/lFJGSso.png
+image: /cover-module-boundaries.png
 imageAlt: Module Boundaries Cover Image
 description: Module boundaries are a great way to enforce architectural rules in your monorepo and manage dependencies. They allow you to define strict boundaries, which can be used to enforce architectural rules and prevent accidental dependencies between modules.
 date: 2023-12-21
 slug: module-boundaries-with-nx
 author:
-  image: https://ng-journal.com/assets/portrait-new.png
+  image: /stefan.png
   imageAlt: Stefan Haas portrait photo
   name: Stefan Haas
   github: HaasStefan

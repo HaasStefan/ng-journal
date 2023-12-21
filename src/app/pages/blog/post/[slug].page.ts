@@ -1,11 +1,8 @@
-
  import {AfterViewInit, Component} from '@angular/core';
  import {injectContent, MarkdownComponent} from "@analogjs/content";
  import {BlogPost} from "../../../models/blog-post.model";
  import {AsyncPipe, DatePipe} from "@angular/common";
  import {AuthorComponent} from "../../../components/author/author.component";
-
-
 
 @Component({
   standalone: true,
@@ -22,7 +19,7 @@
 
                   <div class="mb-16 md:mb-28">
                       <div class="flex justify-center">
-                          <img [src]="post.attributes.image" class="border-red-500 border-2 rounded-lg"
+                          <img [src]="post.attributes.image" class="rounded-lg"
                                [alt]="post.attributes.imageAlt">
                       </div>
 
