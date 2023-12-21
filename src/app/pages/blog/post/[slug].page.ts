@@ -3,6 +3,13 @@
  import {BlogPost} from "../../../models/blog-post.model";
  import {AsyncPipe, DatePipe} from "@angular/common";
  import {AuthorComponent} from "../../../components/author/author.component";
+ import {RouteMeta} from "@analogjs/router";
+ import {postMetaResolver, postTitleResolver} from "../../../resolvers";
+
+ export const routeMeta: RouteMeta = {
+   title: postTitleResolver,
+   meta: postMetaResolver,
+ };
 
 @Component({
   standalone: true,
