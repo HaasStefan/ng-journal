@@ -1,16 +1,13 @@
-
- import { Component } from '@angular/core';
- import {BlogCardComponent} from "../../components/blog-card/blog-card.component";
- import {AsyncPipe} from "@angular/common";
- import {injectContentFiles} from "@analogjs/content";
- import {BlogPost} from "../../models/blog-post.model";
+import {Component} from '@angular/core';
+import {BlogCardComponent} from "../../components/blog-card/blog-card.component";
+import {injectContentFiles} from "@analogjs/content";
+import {BlogPost} from "../../models/blog-post.model";
 
 
 @Component({
   standalone: true,
   imports: [
-    BlogCardComponent,
-    AsyncPipe
+    BlogCardComponent
   ],
   template: `
       <main class="pt-32 w-full">
